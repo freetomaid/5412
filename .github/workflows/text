@@ -15,8 +15,8 @@ jobs:
 
       - name: Set up Git
         run: |
-          git config user.email "user@hotmail.com"
-          git config user.name "Name Surname"
+          git config user.email "freetomaid"
+          git config user.name "freetomaid"
 
       - name: Create version file
         run: echo "1.0.0" > VERSION
@@ -30,4 +30,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          git push https://freetomaid:${GH_TOKEN}@github.com/kuysharee/REPO.git BRANCH
+          git push https://freetomaid:${GH_TOKEN}@github.com/kuysharee/account.git main
