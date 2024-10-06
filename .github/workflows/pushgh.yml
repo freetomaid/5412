@@ -30,4 +30,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          git push https://freetomaid:${GH_TOKEN}@github.com/kuysharee/account.git main
+          git push https://freetomaid:${GH_TOKEN}@github.com/kuysharee/accounts.git main
