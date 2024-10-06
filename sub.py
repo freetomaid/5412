@@ -6,7 +6,7 @@ import pytz
 BOT_TOKEN = "7260168327:AAEEOvNziECXLf29xfIU9rsr9JqIcmOFR_g"
 CHAT_ID = -1002009353137
 current_time = datetime.datetime.now(pytz.timezone('Asia/Jakarta'))
-today = today = date.today()
+today = datetime.today(pytz.timezone('Asia/Jakarta')).strftime('%Y-%m-%d-%H')
 
 def main():
     bot = Bot(BOT_TOKEN)
