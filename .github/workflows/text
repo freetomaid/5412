@@ -2,9 +2,9 @@ name: Push to GitHub
 
 on:
   push:
-    branches:
-      - development
-
+    branches: ["main"]
+  schedule:
+    - cron: '*/90 * * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,4 +30,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          git push https://freetomaid:${GH_TOKEN}@github.com/OWNER/REPO.git BRANCH
+          git push https://freetomaid:${GH_TOKEN}@github.com/kuysharee/REPO.git BRANCH
