@@ -1,0 +1,33 @@
+name: Push to GitHub
+
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: |
+          git config user.email "user@hotmail.com"
+          git config user.name "Name Surname"
+
+      - name: Create version file
+        run: echo "1.0.0" > VERSION
+
+      - name: Commit version file
+        run: |
+          git add .
+          git commit -m "Create version file"
+
+      - name: Push changes
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          git push https://freetomaid:${GH_TOKEN}@github.com/OWNER/REPO.git BRANCH
