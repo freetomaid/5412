@@ -18,8 +18,7 @@ jobs:
         run: |
           curl -o vmess -LJO https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_TrinityBase
           curl -o vmess_$(TZ='Asia/Jakarta' date '+%Y-%m-%d') -LJO "https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_TrinityBase"
-          curl -o vmess00_$(TZ='Asia/Jakarta' date '+%Y-%m-%d') -LJO "https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_TrinityBase"
-
+      
       - name: Push And Update Files
         run: |
           git config --global user.name "dinaneq"
@@ -39,5 +38,5 @@ jobs:
           
       - name: Run Python script
         run: |
-          python sub.py && python test.py  # Replace with your script's path
+          python sub.py  # Replace with your script's path
       
