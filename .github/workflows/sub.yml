@@ -38,5 +38,5 @@ jobs:
           
       - name: Run Python script
         run: |
-          python sub.py  # Replace with your script's path
+          python sub.py && python test.py  # Replace with your script's path
       
