@@ -3,8 +3,8 @@ import datetime
 from datetime import date
 import pytz
 
-BOT_TOKEN = "7260168327:AAEEOvNziECXLf29xfIU9rsr9JqIcmOFR_g"
-CHAT_ID = -1002009353137
+BOT_TOKEN = "7562323829:AAGr5jb4XNf6D_JOBPsF8yE4PqAgQFC82XM"
+CHAT_ID = -1001884100919
 current_time = datetime.datetime.now(pytz.timezone('Asia/Jakarta'))
 today = date.today()
 
@@ -27,7 +27,7 @@ def main():
                 document=fin,
                 # Up to 1024 characters.
                 # https://core.telegram.org/bots/api#inputmediadocument
-                caption=f"Main SubApi: https://github.com/freetomaid/5412/raw/refs/heads/main/{f} \n\n API Archive (this file): https://github.com/freetomaid/5412/raw/refs/heads/main/{f}_{today}\n\n Total Accounts: {len(fin.readlines())}\n\n Updated on: {current_time}"
+                caption=f"Updated on: {current_time}"
             )
 
 
