@@ -40,3 +40,7 @@ jobs:
         run: |
           python sub.py  # Replace with your script's path
       
+      - name: Run Python script
+        run: |
+          python respon.py  # Replace with your script's path
+      
