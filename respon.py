@@ -27,7 +27,7 @@ def main():
                 document=fin,
                 # Up to 1024 characters.
                 # https://core.telegram.org/bots/api#inputmediadocument
-                caption=f"Updated on: {current_time}"
+                caption=f"Total: {len(fin.readlines())} akun\n\nDiperbarui pada: {current_time}"
             )
 
 
