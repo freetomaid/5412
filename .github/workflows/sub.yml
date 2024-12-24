@@ -18,7 +18,9 @@ jobs:
         run: |
           curl -o vmess -LJO https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_TrinityBase
           curl -o vmess_$(TZ='Asia/Jakarta' date '+%Y-%m-%d') -LJO "https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_TrinityBase"
-      
+          curl -o proxylist1.txt -LJO "https://bmkg.xyz/bot/proxy_list.txt"
+          curl -o proxylist1_$(TZ='Asia/Jakarta' date '+%Y-%m-%d').txt -LJO "https://bmkg.xyz/bot/proxy_list.txt"
+   
       - name: Push And Update Files
         run: |
           git config --global user.name "dinaneq"
