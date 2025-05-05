@@ -18,14 +18,11 @@ jobs:
         run: |
           curl -o vmess -LJO https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_TrinityBase
           curl -o vmess_$(TZ='Asia/Jakarta' date '+%Y-%m-%d') -LJO "https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_TrinityBase" 
-##          curl -o proxylist1.txt -LJO "https://cf.cepu.us.kg/update_proxyip.txt"
-##          curl -o proxylist1_$(TZ='Asia/Jakarta' date '+%Y-%m-%d').txt -LJO "https://cf.cepu.us.kg/update_proxyip.txt"
           curl -o proxylist2.txt -LJO "https://raw.githubusercontent.com/FoolVPN-ID/Nautica/refs/heads/main/proxyList.txt"
           curl -o proxylist2_$(TZ='Asia/Jakarta' date '+%Y-%m-%d').txt -LJO "https://raw.githubusercontent.com/FoolVPN-ID/Nautica/refs/heads/main/proxyList.txt"
           curl -o proxylist3.txt -LJO "https://raw.githubusercontent.com/FoolVPN-ID/Nautica/refs/heads/main/rawProxyList.txt"
           curl -o proxylist3_$(TZ='Asia/Jakarta' date '+%Y-%m-%d').txt -LJO "https://raw.githubusercontent.com/FoolVPN-ID/Nautica/refs/heads/main/rawProxyList.txt"
-##          curl -o proxylist4.txt -LJO "https://cf.cepu.us.kg/update_proxyip.txt"
-##          curl -o proxylist4_$(TZ='Asia/Jakarta' date '+%Y-%m-%d').txt -LJO "https://cf.cepu.us.kg/update_proxyip.txt"
+
       - name: Push And Update Files
         run: |
           git config --global user.name "dinaneq"
@@ -51,3 +48,7 @@ jobs:
         run: |
           python respon.py  # Replace with your script's path
       
+##          curl -o proxylist4.txt -LJO "https://cf.cepu.us.kg/update_proxyip.txt"
+##          curl -o proxylist4_$(TZ='Asia/Jakarta' date '+%Y-%m-%d').txt -LJO "https://cf.cepu.us.kg/update_proxyip.txt"
+##          curl -o proxylist1.txt -LJO "https://cf.cepu.us.kg/update_proxyip.txt"
+##          curl -o proxylist1_$(TZ='Asia/Jakarta' date '+%Y-%m-%d').txt -LJO "https://cf.cepu.us.kg/update_proxyip.txt"
