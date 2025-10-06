@@ -16,13 +16,12 @@ jobs:
         uses: actions/checkout@v2
       - name: Get Files
         run: |
-          curl -o vmess -LJO https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_TrinityBase
-          curl -o vmess_$(TZ='Asia/Jakarta' date '+%Y-%m-%d') -LJO "https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_TrinityBase" 
-          curl -o proxylist2.txt -LJO "https://raw.githubusercontent.com/FoolVPN-ID/Nautica/refs/heads/main/proxyList.txt"
-          curl -o proxylist2_$(TZ='Asia/Jakarta' date '+%Y-%m-%d').txt -LJO "https://raw.githubusercontent.com/FoolVPN-ID/Nautica/refs/heads/main/proxyList.txt"
-          curl -o proxylist3.txt -LJO "https://raw.githubusercontent.com/FoolVPN-ID/Nautica/refs/heads/main/rawProxyList.txt"
-          curl -o proxylist3_$(TZ='Asia/Jakarta' date '+%Y-%m-%d').txt -LJO "https://raw.githubusercontent.com/FoolVPN-ID/Nautica/refs/heads/main/rawProxyList.txt"
-
+          curl -o 2.txt -LJO https://gen.trexmedia.eu.org/?template=trojan&domain=bexcoders.biz.id&data=https://github.com/exball/sing-box-config/raw/refs/heads/Master/proxy-scaner/rawProxyList.txt
+          curl -o 3.txt -LJO https://gen.trexmedia.eu.org/?template=trojan&domain=vpn.stupidworld.web.id&data=https://github.com/exball/sing-box-config/raw/refs/heads/Master/proxy-scaner/rawProxyList.txt
+          curl -o 4.txt -LJO https://gen.trexmedia.eu.org/?template=vless&domain=siren.afrcloud.site&data=https://github.com/exball/sing-box-config/raw/refs/heads/Master/proxy-scaner/rawProxyList.txt
+          curl -o 5.txt -LJO https://gen.trexmedia.eu.org/?template=vless&domain=world.stupx2.my.id&data=https://github.com/exball/sing-box-config/raw/refs/heads/Master/proxy-scaner/rawProxyList.txt
+          curl -o 6.txt -LJO https://gen.trexmedia.eu.org/?template=vless&domain=free.tunneling.dpdns.org&data=https://github.com/exball/sing-box-config/raw/refs/heads/Master/proxy-scaner/rawProxyList.txt
+          
       - name: Push And Update Files
         run: |
           git config --global user.name "dinaneq"
